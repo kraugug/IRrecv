@@ -47,11 +47,11 @@
 			</Grid.ColumnDefinitions>
 			<StackPanel Orientation="Vertical" Margin="0,3,0,5">
 				<CheckBox Content="Autostart" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=Autostart}"/>
-				<CheckBox Content="Logging" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=Logging}"/>
+				<CheckBox Content="Start minimized" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=StartMinimized}"/>
 			</StackPanel>
 			<StackPanel Grid.Column="1" Orientation="Vertical" Margin="5,3,0,5">
 				<CheckBox Content="Open serial port after startup" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=OpenSerialPortAtStartup}"/>
-				<CheckBox Content="Start minimized" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=StartMinimized}"/>
+				<CheckBox Content="Logging" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=Logging}"/>
 			</StackPanel>
 			<StackPanel Grid.Column="2" Orientation="Vertical" Margin="5,3,0,5">
 				<CheckBox Content="Auto recognition" IsChecked="{Binding Source={x:Static p:Settings.Default}, Path=AutoRecognition}" IsEnabled="False"/>

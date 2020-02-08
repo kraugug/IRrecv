@@ -37,6 +37,8 @@ namespace IRrecv
 
 		public void Open(Settings.SerialPort settings)
         {
+			if (string.IsNullOrEmpty(settings?.Name))
+				return;
             Port = new SerialPort(settings.Name, settings.Speed, settings.Parity, settings.DataBits, settings.StopBits) { Handshake = settings.Handshake };
             Port.DataReceived += Port_DataReceived;
             Port.Open();

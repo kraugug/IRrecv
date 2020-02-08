@@ -19,6 +19,12 @@ namespace IRrecv
 	/// </summary>
 	public partial class IrRemoteProfilesWindow : Window
 	{
+		#region Properties
+
+		
+
+		#endregion
+
 		#region Constructor
 
 		public IrRemoteProfilesWindow()

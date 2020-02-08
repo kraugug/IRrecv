@@ -4,9 +4,66 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IRrecv"
+		xmlns:s="clr-namespace:IRrecv.Settings"
         mc:Ignorable="d" WindowStartupLocation="CenterOwner"
-        Title="IrRemote profiles" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="{DynamicResource IrRemoteProfilesWindow_Title}" Height="480" Width="420"
+		ResizeMode="CanResizeWithGrip">
+    <Grid Margin="10">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<StackPanel Grid.Row="0" Orientation="Vertical">
+			<Label Content="{DynamicResource IrRemoteProfilesWindow_Label_Profile_Content}"/>
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="Auto"/>
+				</Grid.ColumnDefinitions>
+				<ComboBox Grid.Column="0" IsEditable="True" />
+				<Button Grid.Column="1" Margin="3,0,0,0">
+					<Button.Content>
+						<Image Source="/Resources/Plus.png" />
+					</Button.Content>
+				</Button>
+				<Button Grid.Column="2" Margin="3,0,0,0">
+					<Button.Content>
+						<Image Source="/Resources/Minus.png" />
+					</Button.Content>
+				</Button>
+			</Grid>
+		</StackPanel>
+		<GroupBox Grid.Row="1" Header="Profile settings:" Margin="0,5,0,0" Padding="5">
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<Label Grid.Column="0" Content="{DynamicResource IrRemoteProfilesWindow_Label_IrRemoteProtocol_Content}"/>
+				<Grid Grid.Row="1">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+					<ComboBox Grid.Column="0" ItemsSource="{Binding Source={local:EnumBindingSource {x:Type s:IrRemoteProtocolType}}}" />
+					<Button Grid.Column="1" Margin="3,0,0,0">
+						<Button.Content>
+							<Image Source="/Resources/TrayIcon.ico" Width="22" />
+						</Button.Content>
+					</Button>
+				</Grid>
+				<Label Grid.Row="2" Content="{DynamicResource IrRemoteProfilesWindow_Label_IrRemoteBindings_Content}"/>
+				<DataGrid Grid.Row="3" CanUserAddRows="True" ItemsSource="{Binding Bindings}">
+					<DataGrid.Columns>
+						<DataGridTextColumn Binding="{Binding}" Header="Button name" Width="*"/>
+						<DataGridTextColumn Header="Button code" Width="*"/>
+						<DataGridComboBoxColumn Header="Action" Width="*"/>
+					</DataGrid.Columns>
+				</DataGrid>
+			</Grid>
+		</GroupBox>
+	</Grid>
 </Window>

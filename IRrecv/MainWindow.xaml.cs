@@ -136,7 +136,8 @@ namespace IRrecv
                 Activate();
             };
             TrayIcon.Icon = Properties.Resources.TrayIcon;
-            TrayIcon.Visible = true;
+			TrayIcon.Text = "IRrecv";
+			TrayIcon.Visible = true;
             InitializeComponent();
             if (Properties.Settings.Default.StartMinimized)
             {

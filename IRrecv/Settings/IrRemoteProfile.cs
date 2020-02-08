@@ -13,6 +13,12 @@ namespace IRrecv.Settings
 	{
 		#region Properties
 
+		public IrRemoteBindingCollection Bindings
+		{
+			get;
+			set;
+		}
+
 		public string Name
 		{
 			get => m_Name;
@@ -36,7 +42,9 @@ namespace IRrecv.Settings
 
 		public IrRemoteProfile()
 		{
-
+			Bindings = new IrRemoteBindingCollection();
+			Bindings.Add(new IrRemoteBinding());
+			Bindings.Add(new IrRemoteBinding());
 		}
 
 		public IrRemoteProfile(string name) => Name = name;

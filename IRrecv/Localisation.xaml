@@ -2,11 +2,21 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:IRrecv"
                     xmlns:mscore="clr-namespace:System;assembly=mscorlib">
-    <mscore:String x:Key="SerialPortSettingsWindow_Title">Serial port settings</mscore:String>
+	<!-- IrRemoteProfilesWindow -->
+	<mscore:String x:Key="IrRemoteProfilesWindow_Label_IrRemoteBindings_Content">IrRemote bindings:</mscore:String>
+	<mscore:String x:Key="IrRemoteProfilesWindow_Label_IrRemoteProtocol_Content">IrRemote protocol:</mscore:String>
+	<mscore:String x:Key="IrRemoteProfilesWindow_Label_Profile_Content">Profile:</mscore:String>
+	<mscore:String x:Key="IrRemoteProfilesWindow_Title">IrRemote profiles</mscore:String>
+	
+	<!-- MainWindow -->
+	
+	<!-- SerialPortSettingsWindow -->
+    
     <mscore:String x:Key="SerialPortSettingsWindow_Label_ComPort_Content">Serial line:</mscore:String>
-    <mscore:String x:Key="SerialPortSettingsWindow_Label_Speed_Content">Speed (baud):</mscore:String>
-    <mscore:String x:Key="SerialPortSettingsWindow_Label_DataBits_Content">Data bits:</mscore:String>
-    <mscore:String x:Key="SerialPortSettingsWindow_Label_StopBits_Content">Stop bits:</mscore:String>
-    <mscore:String x:Key="SerialPortSettingsWindow_Label_Parity_Content">Parity:</mscore:String>
-    <mscore:String x:Key="SerialPortSettingsWindow_Label_FlowControl_Content">Flow control:</mscore:String>
+	<mscore:String x:Key="SerialPortSettingsWindow_Label_DataBits_Content">Data bits:</mscore:String>
+	<mscore:String x:Key="SerialPortSettingsWindow_Label_FlowControl_Content">Flow control:</mscore:String>
+	<mscore:String x:Key="SerialPortSettingsWindow_Label_Parity_Content">Parity:</mscore:String>
+	<mscore:String x:Key="SerialPortSettingsWindow_Label_Speed_Content">Speed (baud):</mscore:String>
+	<mscore:String x:Key="SerialPortSettingsWindow_Label_StopBits_Content">Stop bits:</mscore:String>
+	<mscore:String x:Key="SerialPortSettingsWindow_Title">Serial port settings</mscore:String>
 </ResourceDictionary>
